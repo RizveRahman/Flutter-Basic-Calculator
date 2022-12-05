@@ -98,10 +98,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     ElevatedButton(onPressed: (){
                       var no1 = int.parse(textField1.text.toString());
                       var no2 = int.parse(textField2.text.toString());
-                      var sub = no1 / no2;
+                      var sub = (no1 / no2).toStringAsFixed(2);
 
+                      result = "The Division of $no1 and $no2 is: $sub";
                       setState(() {
-                        result = "The Division of $no1 and $no2 is: $sub";
+                        
                       });
                     }, child: Text('Div')),
                   ],
